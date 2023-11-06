@@ -12,10 +12,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: FirstScreen.routeName,
       routes: {
         FirstScreen.routeName: (context) => FirstScreen(),
       },
+      theme: ThemeData(
+          scaffoldBackgroundColor: Colors.black,
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              type: BottomNavigationBarType.shifting,
+              selectedItemColor: Color(0XFFFFB224),
+              unselectedItemColor: Colors.white)),
     );
   }
 }
