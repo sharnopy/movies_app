@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newmovie/shared/style/color.dart';
 import 'package:newmovie/tabs/browse.dart';
 import 'package:newmovie/tabs/home.dart';
 import 'package:newmovie/tabs/list.dart';
@@ -23,25 +24,11 @@ class _FirstScreenState extends State<FirstScreen> {
           index = value;
           setState(() {});
         },
-        items: [
-          BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/images/Home icon.png")),
-              label: "Home",
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/images/search-2.png")),
-              label: "SEARCH",
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: ImageIcon(
-                  AssetImage("assets/images/Icon material-movie.png")),
-              label: "BROWSE",
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: ImageIcon(
-                  AssetImage("assets/images/Icon ionic-md-bookmarks.png")),
-              label: "WATCHLIST",
-              backgroundColor: Colors.black),
+        items:const <BottomNavigationBarItem> [
+          BottomNavigationBarItem(icon:Icon( Icons.home),label: "Home",backgroundColor: primarycolor),
+          BottomNavigationBarItem(icon:Icon( Icons.search),label: "search",backgroundColor: primarycolor),
+          BottomNavigationBarItem(icon:Icon( Icons.movie),label: "movie",backgroundColor: primarycolor),
+          BottomNavigationBarItem(icon:Icon( Icons.book),label: "Watchlist",backgroundColor: primarycolor),
         ],
       ),
       body: tabs[index],
