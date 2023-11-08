@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:newmovie/lay_outs/first_screen.dart';
+import 'package:newmovie/screens/splash_screen/splash_screen.dart';
+import 'package:newmovie/shared/style/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,16 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: FirstScreen.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: {
-        FirstScreen.routeName: (context) => FirstScreen(),
+        SplashScreen.routeName: (context) => SplashScreen(),
       },
-      theme: ThemeData(
-          scaffoldBackgroundColor: Colors.black,
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(
-              type: BottomNavigationBarType.shifting,
-              selectedItemColor: Color(0XFFFFB224),
-              unselectedItemColor: Colors.white)),
+      theme: MyTheme.appTheme,
     );
   }
 }
