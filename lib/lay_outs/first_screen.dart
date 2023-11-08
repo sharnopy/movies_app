@@ -3,7 +3,7 @@ import 'package:newmovie/shared/style/color.dart';
 import 'package:newmovie/tabs/browse.dart';
 import 'package:newmovie/tabs/home.dart';
 import 'package:newmovie/tabs/list.dart';
-import 'package:newmovie/tabs/searc.dart';
+import 'package:newmovie/tabs/search.dart';
 
 class FirstScreen extends StatefulWidget {
   static const String routeName = "firstScreen";
